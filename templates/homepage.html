@@ -4,58 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap">
     <style>
+       
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            background-image: url('/static/images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Roboto Mono', monospace;
             color: white;
-            position: relative;
+            animation: pulseBackground 10s ease-in-out infinite;
         }
 
-        .background-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+
+        @keyframes pulseBackground {
+            0%, 100% {
+                background-color: #282c34; 
+            }
+            50% {
+                background-color: #2e3341; 
+            }
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+       
+        header {
+            background: linear-gradient(to bottom, #4b6cb7, #182848);
             padding: 20px;
             text-align: center;
         }
 
-        h1 {
+        .titulo {
             font-size: 36px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: white;
         }
 
+       
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh; 
+        }
+
+        /* Estilos dos links */
         .links {
-            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
         }
 
         .links a {
-            display: block;
-            margin-bottom: 10px;
+            margin: 5px 0;
             font-size: 20px;
             text-decoration: none;
             color: white;
         }
+
+        .links p {
+            margin: 5px 0;
+            font-size: 20px;
+            color: white;
+        }
+
+        
+        .cat-image {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <!-- <img class="background-image" src="images/nome_da_imagem.jpg" alt="Imagem de fundo"> -->
-    <div class="container">
-        <h1>Meu Portfólio</h1>
-        <p>Bem-vindo ao meu portfólio! Aqui estão alguns links importantes:</p>
+    <header>
+        <h1 class="titulo">Gabriel Zanoni Herculano</h1>
+    </header>
+    <div class="center-content">
+        <img class="cat-image" src="" alt="Imagem de um gato aleatório">
+        <p>Bem-vindo ao meu portfólio! Aqui estão algumas informações:</p>
         <div class="links">
-            <a href="link1.html">Link 1</a>
-            <a href="link2.html">Link 2</a>
-            <a href="link3.html">Link 3</a>
+            <p>Existência: 19 anos</p>
+            <p>Discord ID: 265980379545075712</p>
+            <a href="https://github.com/GbrielZanoni">GitHub</a>
         </div>
     </div>
+
+    <script>
+       
+        const frasesAlternativas = [
+            "Tempo Vivo", 
+            "Existência", 
+            "Vivenciei", 
+            "Vivi", 
+            "Sobrevivi"
+        ];
+
+       
+        const fraseAleatoria = frasesAlternativas[Math.floor(Math.random() * frasesAlternativas.length)];
+        document.querySelector('.links p').textContent = `${fraseAleatoria}: 19 anos`;
+
+        // Essa API eu lembro de ter visto na sua aula a muito tempo atrás, dai vi como fazia
+        // Pra colocar ela em HMTML (Com o chatgpt é claro KKKKKKKK)
+        const catImage = document.querySelector('.cat-image');
+        fetch('https://api.thecatapi.com/v1/images/search')
+            .then(response => response.json())
+            .then(data => {
+                const imageUrl = data[0].url;
+                catImage.src = imageUrl;
+            })
+            .catch(error => console.error(error));
+    </script>
 </body>
 </html>
