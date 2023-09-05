@@ -2,6 +2,7 @@ from flask import Flask
 import requests
 
 app = Flask(__name__)
+app.config['TESTING'] = True
 
 @app.route('/')
 def index():
