@@ -23,8 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install flask
           pip install pytest
-          pip install requests  
+          pip install requests
 
       - name: Rodar Testes
         run: |
-          python -m pytest tests/
+          cd test_site  
+          python -m pytest
