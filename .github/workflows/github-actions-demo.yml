@@ -1,4 +1,4 @@
-name: Teste Automatizado
+name: Testes Automatizados
 
 on:
   push:
@@ -18,12 +18,13 @@ jobs:
         with:
           python-version: 3.11.4
 
-      - name: Instala as Dependências do Site
+      - name: Instalar Dependências
         run: |
           python -m pip install --upgrade pip
           pip install flask
           pip install pytest
+          pip install requests  
 
-      - name: Roda o Arquvio
+      - name: Rodar Testes
         run: |
-          python -m pytest test_site/
+          python -m pytest tests/
