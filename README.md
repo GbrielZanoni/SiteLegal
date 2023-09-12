@@ -20,6 +20,10 @@ Para a criação do ambiente virtual, é **necessário** utilizar o prompt de co
 ```
 python -m venv env
 ```
+### Como o Fluxo de Trabalho funciona?
+
+> De uma forma bem simples! Ele rodará o Pythest que instalará as dependências automáticamente, verificando caso o Python tenha algum update (provavelmente não) e depois executará os arquivos do site, verificando caso há algum erro ou não.
+
 Que irá criar o novo ambiente virtual, então - para inicia-lo ✌️:
 
 Para o Prompt de Comando:
@@ -59,25 +63,23 @@ E **pronto!** 🙌 Após isso, o usuário pode executar o comando **run.py** e r
 
    ~~b. Desenvolva a estrutura de páginas do seu site, incorporando princípios de reutilização de componentes e templates.~~
 
-   a. Configure um workflow no GitHub Actions para automatizar a construção, testes e implantação do site.
+   ~~a. Configure um workflow no GitHub Actions para automatizar a construção, testes e implantação do site.~~
 
    ~~b. Configure o workflow para ser executado em pushes para a branch principal e pull requests.~~
 
-   c~~. Integre ferramentas de verificação de qualidade de código, como ESLint ou Prettier.~~
-
+   ~~c. Integre ferramentas de verificação de qualidade de código, como ESLint ou Prettier.~~
 
    ~~a. Elabore um README.md detalhado com instruções para clonar o projeto, configurar o ambiente local e executar o projeto.~~
 
   ~~ b. Explique o fluxo de trabalho do GitHub Actions, incluindo como ele constrói, testa e implanta automaticamente o site.~~
-
 
    ~~a. Implemente uma versão funcional do seu site, incluindo diferentes páginas e estilos.~~
 
   ~~b. Crie uma tag para marcar a versão inicial e crie um release no GitHub.~~
 
 **Desafios (opcionais - escolha pelo menos 4):**
-   1. **Desafio de Configuração Inicial do GitHub**: Configure um arquivo de configuração `.gitignore` para excluir arquivos desnecessários do repositório.
-   2. **Desafio de Branch Protegida**: Configure a branch principal como protegida, exigindo revisões de código antes de mesclar pull requests.
+   ~~1. **Desafio de Configuração Inicial do GitHub**: Configure um arquivo de configuração `.gitignore` para excluir arquivos desnecessários do repositório.~~
+   ~~2. **Desafio de Branch Protegida**: Configure a branch principal como protegida, exigindo revisões de código antes de mesclar pull requests.~~
    3. **Desafio de Fluxo de Trabalho Customizado**: Crie um fluxo de trabalho personalizado no GitHub Actions para um cenário específico do seu projeto.
    4. **Desafio de Rebase Interativo**: Pratique o rebase interativo para consolidar e organizar commits.
    5. **Desafio de Resolução de Conflitos**: Crie um conflito de merge intencionalmente e resolva-o usando as ferramentas do Git.
