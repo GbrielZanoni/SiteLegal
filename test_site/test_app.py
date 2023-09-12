@@ -14,7 +14,7 @@ class TestHomeView(unittest.TestCase):
 
     def setUp(self):
         ap = app.test_client()
-        self.response = ap.get('/Homepage')
+        self.response = ap.get('/')
         self.response_P1 = ap.get('/secondpage')
 
     # Testamos se a resposta e 200 ("ok")
