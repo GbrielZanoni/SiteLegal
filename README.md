@@ -1,9 +1,50 @@
-# Site Legalzers
-Um site bacana legal feito com Flask!
+# 🤖 Site Bacana Feito por Mim 🖥️ 
 
-## Como Clonar o REPO & Executar o Site Localmente?
-### Para fazer tal feito você precisa primeiro baixar o repositório, extriar os arquivos e executar o arquivo main.py
-### Isso *deve* fazer com que o site rode no seu computador
+Um site básico feito usando Flask e algumas gambiarras que eu consegui encontrar, muitas delas involvem coisas que eu não sabia que existia no GitHub e que são até que bem úteis. 
+
+## Instalãção
+
+Instalar com o Git:
+
+```
+-git clone https://github.com/GbrielZanoni/SiteLegal.git
+```
+
+### Rodando o site em um ambiente virtual
+
+Após a instalação expressa do site, é possível rodar ele em um ambiente virtual.
+Para a criação do ambiente virtual, é **necessário** utilizar o prompt de comando com o seguinte código: 🖥️
+
+```
+python -m venv env
+```
+Que irá criar o novo ambiente virtual, então - para inicia-lo ✌️:
+
+Para o Prompt de Comando:
+```
+.\env\Scripts\Activate.bat
+```
+Para o Windows PowerShell:
+```
+.\env\Scripts\Activate.ps1
+```
+Tenha certeza que o ambiente virtual está ativo, com o comando...
+```
+(env) C:\Users\Usuário\Desktop\GitClone\NomeSite
+```
+
+Tenha em mente que o path do arquivo não importa, porém o ambiente está rodando graças a ao  ***(env)*** no começo do path.
+
+### Instalando dependencias
+
+É necessário instalar as dependências do site, que podem ser facilmente instaladas de forma expressa através do arquivo .txt que está disponível no repositório.
+
+Utilize o Comando:
+```
+pip install -r requirements.txt
+```
+
+E **pronto!** 🙌 Após isso, o usuário pode executar o comando **run.py** e rodar o site localmente;.
 
 ## Aqui estão alguns dos objetivos também que precisam ser feitos para o site
    ~~a. Crie um novo repositório no GitHub para o projeto do site estático.~~
@@ -18,14 +59,14 @@ Um site bacana legal feito com Flask!
 
    a. Configure um workflow no GitHub Actions para automatizar a construção, testes e implantação do site.
 
-   b. Configure o workflow para ser executado em pushes para a branch principal e pull requests.
+   ~~b. Configure o workflow para ser executado em pushes para a branch principal e pull requests.~~
 
-   c. Integre ferramentas de verificação de qualidade de código, como ESLint ou Prettier.
+   c~~. Integre ferramentas de verificação de qualidade de código, como ESLint ou Prettier.~~
 
 
    ~~a. Elabore um README.md detalhado com instruções para clonar o projeto, configurar o ambiente local e executar o projeto.~~
 
-   b. Explique o fluxo de trabalho do GitHub Actions, incluindo como ele constrói, testa e implanta automaticamente o site.
+  ~~ b. Explique o fluxo de trabalho do GitHub Actions, incluindo como ele constrói, testa e implanta automaticamente o site.~~
 
 
    ~~a. Implemente uma versão funcional do seu site, incluindo diferentes páginas e estilos.~~
