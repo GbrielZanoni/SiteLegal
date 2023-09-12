@@ -1,3 +1,5 @@
+[![Testes Automátizados](https://github.com/GbrielZanoni/SiteLegal/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/GbrielZanoni/SiteLegal/actions/workflows/github-actions-demo.yml)
+
 # 🤖 Site Bacana Feito por Mim 🖥️ 
 
 Um site básico feito usando Flask e algumas gambiarras que eu consegui encontrar, muitas delas involvem coisas que eu não sabia que existia no GitHub e que são até que bem úteis. 
