@@ -17,12 +17,12 @@ class TestHomeView(unittest.TestCase):
         self.response = ap.get('/')
         self.response_P1 = ap.get('/secondpage')
 
-    # Testamos se a resposta e 200 ("ok")
+
     def test_get(self):
         self.assertEqual(200, self.response.status_code)
         self.assertEqual(200, self.response_P1.status_code)
 
-    # Testamos se o content_type da resposta da home esta correto
+
     def test_content_type(self):
         self.assertIn('text/html', self.response.content_type)
         self.assertIn('text/html', self.response_P1.content_type)
