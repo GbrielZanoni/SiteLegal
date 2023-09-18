@@ -26,4 +26,4 @@ jobs:
       
       - name: Rodar arquivo
         run: |
-          python -m pytest tests/
+          python -m pytest test_site/
