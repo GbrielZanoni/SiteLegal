@@ -1,105 +1,67 @@
-[![Testes Automátizados](https://github.com/GbrielZanoni/SiteLegal/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/GbrielZanoni/SiteLegal/actions/workflows/github-actions-demo.yml)
 
-# 🤖 Site Bacana Feito por Mim 🖥️ 
+[![Testes Automátizados](https://github.com/GuilhLopes/portf-lio-/actions/workflows/testes.yaml/badge.svg)](https://github.com/GuilhLopes/portf-lio-/actions/workflows/testes.yaml)
 
-Um site básico feito usando Flask e algumas gambiarras que eu consegui encontrar, muitas delas involvem coisas que eu não sabia que existia no GitHub e que são até que bem úteis. 
+# Portfólio
+Nesse portfólio conterá todos os arquivos que constroem o site.
+# Guia de instalação
 
-## Instalãção
-
-Instalar com o Git:
-
+Primeiramente devemos Clonar o repositório para sua maquina local com o comando pelo git bash:
 ```
--git clone https://github.com/GbrielZanoni/SiteLegal.git
+git clone https://github.com/GuilhLopes/portf-lio-.git
 ```
+A partir dai recomendados criar uma nova Branch para fazer as alterações sem ter o risco para dar erros no codigo da main:
+```
+git checkout -b 'nome da branch'
+```
+### Criando o ambiente virtual
 
-### Rodando o site em um ambiente virtual
+Após a criação de uma nova branch no seu repositório local, iremos criar um ambiente virtual (.venv) e instalar as dependencias do projeto nesse ambiente.
 
-Após a instalação expressa do site, é possível rodar ele em um ambiente virtual.
-Para a criação do ambiente virtual, é **necessário** utilizar o prompt de comando com o seguinte código: 🖥️
-
+Para a criação do ambiente virtual utilizamos no cmd: 
 ```
 python -m venv env
 ```
-### Como o Fluxo de Trabalho funciona?
+Após a criação devemos ativar o ambiente virtual:
 
-> De uma forma bem simples! Ele rodará o Pythest que instalará as dependências automáticamente, verificando caso o Python tenha algum update (provavelmente não) e depois executará os arquivos do site, verificando caso há algum erro ou não.
-
-Que irá criar o novo ambiente virtual, então - para inicia-lo ✌️:
-
-Para o Prompt de Comando:
+Código cmd:
 ```
 .\env\Scripts\Activate.bat
 ```
-Para o Windows PowerShell:
+Código PowerShell:
+
 ```
 .\env\Scripts\Activate.ps1
 ```
-Tenha certeza que o ambiente virtual está ativo, com o comando...
+Antes de irmos para o proximo passa certifique-se que o ambiente virtual está ativo, no seu cmd ou powershell devem estar com o caminho:
 ```
-(env) C:\Users\Usuário\Desktop\GitClone\NomeSite
+(env) C:\Users\Usuário\Desktop\Portifólio\portf-lio->
 ```
 
-Tenha em mente que o path do arquivo não importa, porém o ambiente está rodando graças a ao  ***(env)*** no começo do path.
+Note que o caminho pode ser diferente, mais tevemos ter o ***(env)*** no começo do caminho.
 
 ### Instalando dependencias
 
-É necessário instalar as dependências do site, que podem ser facilmente instaladas de forma expressa através do arquivo .txt que está disponível no repositório.
-
-Utilize o Comando:
+Pronto, agora que temos o nosso ambiente virtual, podemos instalar as dependencias do nosso projeto utilizando:
 ```
 pip install -r requirements.txt
 ```
 
-E **pronto!** 🙌 Após isso, o usuário pode executar o comando **run.py** e rodar o site localmente;.
+Ao final desse comando poderemos ir no arquivo **run.py** e rodar o site no localHost.
 
-## Aqui estão alguns dos objetivos também que precisam ser feitos para o site
-   ~~a. Crie um novo repositório no GitHub para o projeto do site estático.~~
+# Organização dos arquivos
 
-  ~~b. Clone o repositório para o seu ambiente de desenvolvimento local.~~
-   
-   ~~c. Estabeleça uma estrutura básica do projeto, incluindo páginas HTML, estilos CSS e ativos (imagens, ícones etc.).~~
+- *Arquivos em HTML:* Todos os arquivos HTML estarão na pasta */templates*.
 
-   ~~a. Escolha um gerador de site estático, como Jekyll, Hugo, Gatsby ou Next.js.~~
+- *Arquivos app e run:* Estarão no pasta principal do repositório, e o arquivo run.py é utilizado para rodar o site e o app.py são as configurações das rotas.
 
-   ~~b. Desenvolva a estrutura de páginas do seu site, incorporando princípios de reutilização de componentes e templates.~~
+- *Arquivos de imagem:* O caminho pra os arquivos de imagem é */static/imagens*, nessa pasta estarão todos os arquivos de imagens utilizados.
 
-   ~~a. Configure um workflow no GitHub Actions para automatizar a construção, testes e implantação do site.~~
+- *Arquivo de testes:* Esses arquivos estarão na pasta */tests*, serão os arquivos que farão o teste das funcionalidades.
 
-   ~~b. Configure o workflow para ser executado em pushes para a branch principal e pull requests.~~
+# Fluxo de trabalho do Actions
 
-   ~~c. Integre ferramentas de verificação de qualidade de código, como ESLint ou Prettier.~~
-
-   ~~a. Elabore um README.md detalhado com instruções para clonar o projeto, configurar o ambiente local e executar o projeto.~~
-
-  ~~ b. Explique o fluxo de trabalho do GitHub Actions, incluindo como ele constrói, testa e implanta automaticamente o site.~~
-
-   ~~a. Implemente uma versão funcional do seu site, incluindo diferentes páginas e estilos.~~
-
-  ~~b. Crie uma tag para marcar a versão inicial e crie um release no GitHub.~~
-
-**Desafios (opcionais - escolha pelo menos 4):**
-   ~~1. **Desafio de Configuração Inicial do GitHub**: Configure um arquivo de configuração `.gitignore` para excluir arquivos desnecessários do repositório.~~
-   ~~2. **Desafio de Branch Protegida**: Configure a branch principal como protegida, exigindo revisões de código antes de mesclar pull requests.~~
-   3. **Desafio de Fluxo de Trabalho Customizado**: Crie um fluxo de trabalho personalizado no GitHub Actions para um cenário específico do seu projeto.
-   4. **Desafio de Rebase Interativo**: Pratique o rebase interativo para consolidar e organizar commits.
-   5. **Desafio de Resolução de Conflitos**: Crie um conflito de merge intencionalmente e resolva-o usando as ferramentas do Git.
-   6. **Desafio de Dependências Atualizadas**: Configure um fluxo de trabalho para verificar e atualizar automaticamente as dependências do projeto.
-   7. **Desafio de Revisão de Código**: Crie uma revisão de código simulada para um pull request, fornecendo comentários construtivos.
-   ~~8. **Desafio de Integração com API**: Integre o GitHub Actions com uma API externa, como um serviço de notificação.~~
-   9. **Desafio de Configuração de Badge**: Adicione um badge de status do GitHub Actions ao seu README.md para mostrar o status do pipeline.
-   10. **Desafio de Integração Contínua Multi-Plataforma**: Configure o pipeline de CI para executar testes em diferentes sistemas operacionais (Linux, Windows, macOS).
-   11. **Desafio de Monitoramento de Pull Requests**: Configure um workflow para analisar automaticamente novos pull requests em busca de problemas.
-   12. **Desafio de Publicação de GitHub Pages**: Configure o pipeline para publicar automaticamente o site estático no GitHub Pages.
-   13. **Desafio de Integração com Chatbot**: Crie um fluxo de trabalho que envie notificações para um chatbot sempre que ocorrerem alterações no repositório.
-   14. **Desafio de Testes de Regressão**: Implemente testes de regressão automatizados para garantir que novas alterações não afetem funcionalidades existentes.
-   15. **Desafio de Validação de Links**: Crie um script que verifique e reporte links quebrados no seu site estático.
-   16. **Desafio de Variáveis de Ambiente**: Utilize variáveis de ambiente no GitHub Actions para armazenar informações sensíveis, como chaves de API.
-   17. **Desafio de Análise de Desempenho**: Utilize ferramentas como Lighthouse para avaliar o desempenho do site e implemente otimizações.
-   18. **Desafio de Segurança**: Realize uma análise de segurança no código e corrija possíveis vulnerabilidades.
-   19. **Desafio de Integração de CDN**: Configure a integração com um serviço de CDN para otimizar a entrega de conteúdo estático.
-   20. **Desafio de Redirecionamento 301**: Implemente redirecionamentos 301 para URLs antigas do seu site, mantendo a compatibilidade.
-   21. **Desafio de Versionamento Semântico**: Implemente um sistema de versionamento semântico para seu projeto e documente as mudanças em releases.
-   22. **Desafio de Ambientes Multi-Estágios**: Configure diferentes ambientes (desenvolvimento, produção etc.) no GitHub Actions.
-   23. **Desafio de Integração com Ferramentas de Revisão de Código**: Integre o GitHub Actions com ferramentas de revisão estática de código, como SonarQube.
-   24. **Desafio de Autenticação com OAuth**: Configure autenticação OAuth para acessar recursos externos no pipeline de CI/CD.
-   25. **Desafio de Integração com Base de Dados**: Crie um fluxo de trabalho que execute testes de integração com uma base de dados.
+- Passo 1: irá criar uma maquina virtual ubuntu para rodar os códigos.
+- Passo 2: irá criar todos os arquivos do reposotório para a maquina virtual.
+- Passo 3: irá instalar e configurar o python na versão 3.11.4 para rodar os arquivos.
+- Passo 4: fará a instalação das dependencias do python de acordo com o *requirements.txt*.
+- Passo 5: Utilizará o pytest para fazer os testes configurados na pasta *tests*.
