@@ -1,4 +1,4 @@
-[![Testes Automátizados](https://github.com/GbrielZanoni/SiteLegal/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/GbrielZanoni/SiteLegal/actions/workflows/github-actions-demo.yml)
+[![Testes Automátizados](https://github.com/GbrielZanoni/SiteLegal/actions/workflows/testes.yml/badge.svg)](https://github.com/GbrielZanoni/SiteLegal/actions/workflows/testes.yml)
 
 # 🤖 Site Bacana Feito por Mim 🖥️ 
 
